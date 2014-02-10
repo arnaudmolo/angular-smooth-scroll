@@ -12,6 +12,13 @@ module.exports = function(grunt) {
       ' */\n',
 
     watch: {
+      karma: {
+        files: ['src/**/*.coffee', 'sample/**/*', 'test/spec/**/*.coffee'],
+        tasks: ['coffee:dist', 'karma:unit'],
+        options: {
+          livereload: true
+        }
+      },
       coffee: {
         files: ['src/**/*.coffee', 'sample/**/*'],
         tasks: ['coffee:dist'],
@@ -146,7 +153,7 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('default', ['coffeelint', 'coffee:build', 'karma:unit', 'uglify']);
-  grunt.registerTask('test', ['karma:watch']);
+  grunt.registerTask('test', ['coffee:dist', 'karma:unit', 'watch:karma']);
   grunt.registerTask('build', ['default']);
 
 };

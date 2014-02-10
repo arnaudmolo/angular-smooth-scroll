@@ -58,4 +58,4 @@ angular.module("SmoothScroll", [])
         defer.promise.then undefined, (final_x = window.pageYOffset) ->
           window.onload = () -> scrollTo 0, final_x
     }
-  ]
+  ] 

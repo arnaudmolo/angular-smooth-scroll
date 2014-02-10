@@ -17,7 +17,7 @@ module.exports = function(config) {
       '../bower_components/angular/angular.js',
       '../bower_components/angular-mocks/angular-mocks.js',
       '../bower_components/should/should.js',
-      '../build/ng-smoothscroll.min.js',
+      '../.tmp/scripts/ng-smoothscroll.js',
       '**/*.coffee'
     ],
 
