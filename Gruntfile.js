@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 
     watch: {
       coffee: {
-        files: ['src/**/*.coffee'],
+        files: ['src/**/*.coffee', 'sample/**/*'],
         tasks: ['coffee:dist'],
         options: {
           livereload: true
