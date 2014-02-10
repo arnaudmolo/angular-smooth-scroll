@@ -104,6 +104,13 @@ module.exports = function(grunt) {
       }
     },
 
+    coffeelint: {
+      app: ['./src/**/*.coffee'],
+      options: {
+        configFile: 'coffeelint.json'
+      }
+    },
+
     concat: {
       build: {
         options: {
@@ -121,6 +128,7 @@ module.exports = function(grunt) {
 
   });
 
+  grunt.loadNpmTasks('grunt-coffeelint');
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-concat');
@@ -136,7 +144,7 @@ module.exports = function(grunt) {
     'watch'
   ]);
 
-  grunt.registerTask('default', ['coffee:build', /* 'karma:unit', */ 'uglify']);
+  grunt.registerTask('default', ['coffeelint', 'coffee:build', /* 'karma:unit', */ 'uglify']);
   grunt.registerTask('test', ['karma:watch']);
   grunt.registerTask('build', ['default']);
 
