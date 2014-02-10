@@ -81,7 +81,8 @@ module.exports = function(grunt) {
     karma: {
       unit: {
         configFile: 'test/karma.conf.js',
-        singleRun: true,
+        singleRun: false,
+        framework: "mocha",
         coverageReporter: {
           type: 'text',
           dir: 'coverage/'
@@ -144,7 +145,7 @@ module.exports = function(grunt) {
     'watch'
   ]);
 
-  grunt.registerTask('default', ['coffeelint', 'coffee:build', /* 'karma:unit', */ 'uglify']);
+  grunt.registerTask('default', ['coffeelint', 'coffee:build', 'karma:unit', 'uglify']);
   grunt.registerTask('test', ['karma:watch']);
   grunt.registerTask('build', ['default']);
 
