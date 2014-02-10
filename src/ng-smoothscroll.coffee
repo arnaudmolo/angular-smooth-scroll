@@ -18,13 +18,12 @@ angular.module("SmoothScroll", [])
 
       speed = Math.round distance / 100
       speed = 20 if speed > 20
-      step = Math.round = distance /25
+      step = Math.round distance /25
 
       leap_y = (if stop_y > start_y then start_y + step else start_y - step )
       timer = 0
 
       down = (leap_y, timer, end) ->
-        console.log "down", leap_y
         setTimeout () ->
           scrollTo 0, leap_y
           defer.resolve leap_y if leap_y >= end

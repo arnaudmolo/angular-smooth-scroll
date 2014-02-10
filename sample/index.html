@@ -6,12 +6,20 @@
     body{
       height: 3000px;
     }
+    #first-scroll{
+      height: 1500px;
+    }
     </style>
   </head>
   <body>
 
     <div ng-controller="MainCtrl">
-      <button ng-click="goTo(500)">Go to</button>
+      <div id="first-scroll">
+        <button ng-click="goTo(500)">Go to</button>
+      </div>
+      <div id="second-scroll">
+        <button ng-click="wiggle()">Make it wiggle!</button>
+      </div>
     </div>
 
     <script src="../bower_components/angular/angular.js"></script>
