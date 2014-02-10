@@ -12,17 +12,14 @@ include the ```SmoothScroll``` in your application dependencies
 
 ```SmoothScroll.$goTo(Number)``` return a promises resolved when the scroll is done
 
-`` javascript
+``
   var promise = SmoothScroll.$goTo(600);
   promise.then(function(end){
     console.log("done", end);
   });
 ``
 
-or
-
-`` javascript
-
+```
   SmoothScroll.$goTo(0).then(function() {
     return SmoothScroll.$goTo(500);
   }).then(function() {
@@ -34,11 +31,11 @@ or
   }).then(function() {
     return SmoothScroll.$goTo(200);
   });
-
-``
+```
+---------
 
 Next step:
----------
+=======
 * tests!
 * accept elements as arguments
 * accept Y scrolls
