@@ -52,6 +52,18 @@ module.exports = function(grunt) {
           dest: '.tmp/spec',
           ext: '.js'
         }]
+      },
+      build: {
+        options: {
+          sourceMap: false
+        },
+        files: [{
+          expand: true,
+          cwd: 'src',
+          src: '**/*.coffee',
+          dest: 'build/',
+          ext: '.js'
+        }]
       }
     },
 
@@ -61,7 +73,7 @@ module.exports = function(grunt) {
         report: 'gzip'
       },
       build: {
-        src: 'src/ng-smoothscroll.js',
+        src: 'build/ng-smoothscroll.js',
         dest: 'build/ng-smoothscroll.min.js'
       }
     },
@@ -87,8 +99,8 @@ module.exports = function(grunt) {
       gruntfile: {
         src: 'Gruntfile.js'
       },
-      src: {
-        src: ['src/*.js']
+      built: {
+        src: ['build/*.js']
       }
     },
 
@@ -124,7 +136,7 @@ module.exports = function(grunt) {
     'watch'
   ]);
 
-  grunt.registerTask('default', ['jshint', 'karma:unit', 'uglify', 'concat:build']);
+  grunt.registerTask('default', ['coffee:build', /* 'karma:unit', */ 'uglify']);
   grunt.registerTask('test', ['karma:watch']);
   grunt.registerTask('build', ['default']);
 
