@@ -88,7 +88,7 @@ module.exports = function(grunt) {
     karma: {
       unit: {
         configFile: 'test/karma.conf.js',
-        singleRun: false,
+        singleRun: true,
         framework: "mocha",
         coverageReporter: {
           type: 'text',
@@ -97,7 +97,7 @@ module.exports = function(grunt) {
       },
       watch: {
         configFile: 'test/karma.conf.js',
-        singleRun: false,
+        singleRun: true,
         reporters: ['progress']  // Don't display coverage
       }
     },
