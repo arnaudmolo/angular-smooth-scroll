@@ -20,7 +20,7 @@ app.controller("MainCtrl", ["$scope", "SmoothScroll", function($scope, SmoothScr
     }).then(function() {
       return SmoothScroll.$goTo(0);
     }).then(function() {
-      return SmoothScroll.$goTo(200);
+      return SmoothScroll.$goTo("#go-cat");
     });
   };
 
