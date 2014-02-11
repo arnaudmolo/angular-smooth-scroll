@@ -149,6 +149,7 @@ module.exports = function(grunt) {
   grunt.registerTask('dev', [
     'clean',
     'connect:server',
+    'coffee:dist',
     'watch'
   ]);
 

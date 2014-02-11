@@ -15,7 +15,6 @@ describe 'SmoothScroll', ->
     Smoothscroll.$goTo.should.be.a.function
 
   describe '$goTo', ->
-    it 'should return a promise', (done) ->
+    it 'should return a promise', () ->
       promise = Smoothscroll.$goTo 500
-      console.log promise
-      do done
+      promise.then.should.be.a.function
