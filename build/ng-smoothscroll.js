@@ -70,7 +70,13 @@
       };
       return {
         $goTo: function(y, x) {
-          var defer;
+          var defer, _ref;
+          if ((_ref = y[0]) != null ? _ref.tagName : void 0) {
+            y = getElementTop(y[0]);
+          }
+          if (typeof y === "string") {
+            y = getElementTop(document.querySelector(y));
+          }
           defer = $q.defer();
           SmoothScroll(window.pageYOffset, y, defer);
           return defer.promise.then(void 0, function(final_x) {
