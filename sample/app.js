@@ -10,7 +10,7 @@ app.controller("MainCtrl", ["$scope", "SmoothScroll", function($scope, SmoothScr
     });
   }
 
-  $scope.wiggle = function(){
+  $scope.wiggle = function() {
     SmoothScroll.$goTo(0).then(function() {
       return SmoothScroll.$goTo(500);
     }).then(function() {
@@ -21,6 +21,19 @@ app.controller("MainCtrl", ["$scope", "SmoothScroll", function($scope, SmoothScr
       return SmoothScroll.$goTo(0);
     }).then(function() {
       return SmoothScroll.$goTo(200);
+    });
+  };
+
+  $scope.goToCat = function() {
+    var cat = angular.element(document.getElementById("cat"));
+    SmoothScroll.$goTo(cat).then(function() {
+      alert('meow');
+    });
+  };
+
+  $scope.goToDog = function() {
+    SmoothScroll.$goTo("#dog").then(function() {
+      alert('whouf');
     });
   }
 

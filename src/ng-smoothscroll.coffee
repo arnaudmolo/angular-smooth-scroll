@@ -53,6 +53,10 @@ angular.module("SmoothScroll", [])
 
     {
       $goTo: (y, x) ->
+        if y[0]?.tagName
+          y = getElementTop y[0]
+        if typeof y is "string"
+          y = getElementTop document.querySelector y
         defer = do $q.defer
         SmoothScroll window.pageYOffset, y, defer
         defer.promise.then undefined, (final_x = window.pageYOffset) ->
