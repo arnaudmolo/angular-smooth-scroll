@@ -10,7 +10,7 @@ How To
 
 include the ```SmoothScroll``` in your application dependencies
 
-```SmoothScroll.$goTo(Number)``` return a promises resolved when the scroll is done
+```SmoothScroll.$goTo(param)``` return a promises resolved when the scroll is done
 
 ``
   var promise = SmoothScroll.$goTo(600);
@@ -32,6 +32,13 @@ include the ```SmoothScroll``` in your application dependencies
     return SmoothScroll.$goTo(200);
   });
 ```
+
+``$goTo`` accepts :
+  number
+  simple DOM element
+  angular element
+  selector
+
 ---------
 
 Next step:

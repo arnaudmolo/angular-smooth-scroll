@@ -71,8 +71,11 @@
       return {
         $goTo: function(y, x) {
           var defer, _ref;
-          if ((_ref = y[0]) != null ? _ref.tagName : void 0) {
+          if (((_ref = y[0]) != null ? _ref.tagName : void 0) != null) {
             y = getElementTop(y[0]);
+          }
+          if (y.tagName != null) {
+            y = getElementTop(y);
           }
           if (typeof y === "string") {
             y = getElementTop(document.querySelector(y));
