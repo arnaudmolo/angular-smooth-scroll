@@ -1,8 +1,8 @@
 {
   "name": "ngSmoothScroll",
-  "version": "0.0.0",
+  "version": "0.2.0",
   "authors": [
-    "Molo <arnaud@onesime.fr>"
+    "Arnaud Pichon <arnaud@onesime.fr>"
   ],
   "license": "MIT",
   "ignore": [
@@ -13,7 +13,7 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.2.10"
+    "angular": "~1.2"
   },
   "devDependencies": {
     "angular-scenario": "~1.2.12",

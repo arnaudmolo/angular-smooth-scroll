@@ -34,10 +34,10 @@ include the ```SmoothScroll``` in your application dependencies
 ```
 
 ``$goTo`` accepts :
-  number
-  simple DOM element
-  angular element
-  selector
+  * number
+  * simple DOM element
+  * angular element
+  * selector
 
 ---------
 
