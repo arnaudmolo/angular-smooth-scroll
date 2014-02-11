@@ -154,7 +154,7 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('default', ['coffeelint', 'coffee:build', 'karma:unit', 'uglify']);
-  grunt.registerTask('test', ['coffee:dist', 'karma:unit', 'watch:karma']);
+  grunt.registerTask('test', ['coffee:dist', 'karma:unit']);
   grunt.registerTask('build', ['default']);
 
 };
