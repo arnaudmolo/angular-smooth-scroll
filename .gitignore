@@ -4,3 +4,4 @@ coverage
 future.sh
 .tmp
 bower_components
+.DS_Store
