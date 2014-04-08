@@ -12,6 +12,7 @@
     "test",
     "tests"
   ],
+  "main": "./build/ng-smoothscroll.js",
   "dependencies": {
     "angular": "~1.2"
   },
